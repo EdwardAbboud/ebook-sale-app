@@ -1,0 +1,31 @@
+<section class="py-2">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <h1 class="display-3 mt-3 pt-5">
+        Web Development E-Book
+      </h1><p class="lead">learn web-development front to back</p>
+      <form action="/charge" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js"
+          class="stripe-button"
+          {{! enter API key below }}
+          data-key=""
+          data-amount="2500"
+          data-name="Web Development Ebook"
+          data-description="Ebook written by Brad Traverysyeu4ryuw"
+          data-image="/img/marketplace.png"
+        >
+        </script>
+        <script>
+          // Hide default stripe button
+          document.getElementsByClassName('stripe-button-el')[0].style.display="none";
+        </script>
+        <button type="submit" class="btn btn-outline-dark text-white">Purchase
+          for $25.00</button>
+      </form>
+      <div class="col-md-6">
+        <img src="/img/book.png" alt="img-fluid" />
+      </div>
+    </div>
+  </div>
+</section>
